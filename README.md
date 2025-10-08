@@ -1,69 +1,78 @@
-# React + TypeScript + Vite
+﻿# Zwip - Modern Digital Wallet
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A sleek, modern digital wallet application built with React, TypeScript, and Vite. Send, receive, and manage your money with ease.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-  **Balance Management** - Secure balance visibility with passcode protection
+-  **Send Money** - Multi-step flow with contact selection and amount entry
+-  **Receive Money** - QR code and payment request functionality
+-  **Transactions** - Complete transaction history with filtering
+-  **Quick Payments** - Fast payment processing with multiple methods
+-  **Modern UI** - Clean, professional design with smooth animations
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Frontend**: React 18 + TypeScript
+- **Build Tool**: Vite
+- **State Management**: Zustand
+- **Styling**: Inline CSS with design system
+- **Icons**: Custom SVG components
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Getting Started
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Prerequisites
+- Node.js 16+ 
+- npm or yarn
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Installation
+\\\ash
+# Clone the repository
+git clone https://github.com/Ambaicci/zwip-web.git
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+# Install dependencies
+npm install
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+# Start development server
+npm run dev
+\\\
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Build
+\\\ash
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+\\\
+
+## Project Structure
+
+\\\
+src/
+ components/     # Reusable UI components
+ store/         # Zustand state management
+ theme/         # Design system and theming
+ utils/         # Utilities and lazy loading
+ [Features]/    # Feature-specific components
+\\\
+
+## Deployment
+
+This project is configured for deployment on Vercel:
+
+1. Push to GitHub
+2. Connect repository to Vercel
+3. Deploy automatically
+
+## License
+
+MIT License - see LICENSE file for details
+
+## Contributing
+
+1. Fork the project
+2. Create your feature branch (\git checkout -b feature/AmazingFeature\)
+3. Commit your changes (\git commit -m 'Add some AmazingFeature'\)
+4. Push to the branch (\git push origin feature/AmazingFeature\)
+5. Open a Pull Request
