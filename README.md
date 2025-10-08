@@ -1,12 +1,13 @@
-﻿# Zwip - Modern Digital Wallet
+﻿# Zwip Virtual Bank - Modern Digital Banking
 
-A sleek, modern digital wallet application built with React, TypeScript, and Vite. Send, receive, and manage your money with ease.
+A comprehensive virtual banking application built with React, TypeScript, and Vite. Send, receive, invest, and manage your finances with enterprise-grade security.
 
 ## Features
 
 -  **Balance Management** - Secure balance visibility with passcode protection
--  **Send Money** - Multi-step flow with contact selection and amount entry
+-  **Send Money** - Multi-step flow with contact selection and amount entry  
 -  **Receive Money** - QR code and payment request functionality
+-  **Banking Services** - Comprehensive financial management
 -  **Transactions** - Complete transaction history with filtering
 -  **Quick Payments** - Fast payment processing with multiple methods
 -  **Modern UI** - Clean, professional design with smooth animations
@@ -18,6 +19,7 @@ A sleek, modern digital wallet application built with React, TypeScript, and Vit
 - **State Management**: Zustand
 - **Styling**: Inline CSS with design system
 - **Icons**: Custom SVG components
+- **Backend**: Supabase (PostgreSQL + Auth)
 
 ## Getting Started
 
