@@ -1,0 +1,88 @@
+﻿// Enhanced My Transactions Section with more green
+      <div style={{
+        background: 'linear-gradient(135deg, rgba(11, 11, 11, 0.9) 0%, rgba(6, 46, 38, 0.3) 100%)',
+        padding: '24px',
+        borderRadius: '24px',
+        border: `1px solid rgba(0, 103, 79, 0.3)`,
+        backdropFilter: 'blur(20px)',
+        boxShadow: '0 8px 32px rgba(0, 103, 79, 0.15)',
+        position: 'relative',
+        overflow: 'hidden'
+      }}>
+        {/* Green accent background */}
+        <div style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          height: '2px',
+          background: 'linear-gradient(90deg, #00674F 0%, #008F6B 50%, #00674F 100%)'
+        }}></div>
+        
+        <div style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          marginBottom: '20px',
+          position: 'relative',
+          zIndex: 1
+        }}>
+          <h2 style={{ 
+            margin: 0, 
+            fontSize: '18px', 
+            fontWeight: 700, 
+            color: THEME.white,
+            letterSpacing: '-0.3px'
+          }}>
+            My Transactions
+          </h2>
+          <button 
+            onClick={() => setCurrentScreen('transactions')}
+            style={{
+              background: 'rgba(0, 103, 79, 0.2)',
+              border: `1px solid rgba(0, 103, 79, 0.4)`,
+              color: THEME.green,
+              fontSize: '12px',
+              fontWeight: 600,
+              cursor: 'pointer',
+              padding: '8px 16px',
+              borderRadius: '8px',
+              transition: 'all 0.3s ease',
+              letterSpacing: '0.3px'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = THEME.green;
+              e.currentTarget.style.color = THEME.black;
+              e.currentTarget.style.transform = 'scale(1.05)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = 'rgba(0, 103, 79, 0.2)';
+              e.currentTarget.style.color = THEME.green;
+              e.currentTarget.style.transform = 'scale(1)';
+            }}
+          >
+            view all
+          </button>
+        </div>
+        
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '14px', position: 'relative', zIndex: 1 }}>
+          <TransactionItem 
+            type="received"
+            name="Sarah Wilson"
+            amount={50.00}
+            date="Today, 14:30"
+          />
+          <TransactionItem 
+            type="sent"
+            name="Coffee Shop"
+            amount={8.50}
+            date="Today, 12:15"
+          />
+          <TransactionItem 
+            type="received"
+            name="Mike Johnson"
+            amount={100.00}
+            date="Yesterday, 16:45"
+          />
+        </div>
+      </div>
