@@ -1,5 +1,5 @@
-﻿// src/App.tsx - PROFESSIONAL CLEAN VERSION: No animations, lowercase balance, clean design
-import React, { useEffect, useState, Suspense } from 'react';
+// src/App.tsx - PROFESSIONAL CLEAN VERSION: No animations, lowercase balance, clean design
+import { useEffect, useState, Suspense } from 'react';
 import { useStore } from './store/useStore';
 import {
   SendMoney,

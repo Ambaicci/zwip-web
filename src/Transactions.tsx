@@ -30,7 +30,7 @@ export default function Transactions({ setCurrentScreen }: { setCurrentScreen: (
   const [sortBy, setSortBy] = useState<SortOption>('date');
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedTransaction, setSelectedTransaction] = useState<EnhancedTransaction | null>(null);
+  const [, setSelectedTransaction] = useState<EnhancedTransaction | null>(null);
 
   const [showAnalytics, setShowAnalytics] = useState(false);
   const [exporting, setExporting] = useState(false);

@@ -39,16 +39,16 @@ export default function ReceiveMoney({ setCurrentScreen }: { setCurrentScreen: (
         setQrAnimation(progress);
         if (progress >= 100) {
           clearInterval(interval);
-          const qrData = JSON.stringify({
-            type: 'payment_request',
-            amount: parseFloat(amount),
-            currency: 'USD',
-            from: selectedContact?.phone || 'anyone',
-            to: user?.phoneNumber,
-            note: note,
-            timestamp: new Date().toISOString(),
-            app: 'zwip'
-          });
+          // const _qrData = JSON.stringify({
+          //             type: 'payment_request',
+          //             amount: parseFloat(amount),
+          //             currency: 'USD',
+          //             from: selectedContact?.phone || 'anyone',
+          //             to: user?.phoneNumber,
+          //             note: note,
+          //             timestamp: new Date().toISOString(),
+          //             app: 'zwip'
+          // });
 
         }
       }, 30);

@@ -1,4 +1,4 @@
-﻿// src/Settings.tsx - MOBILE OPTIMIZED: Touch-friendly, proper mobile navigation
+// src/Settings.tsx - MOBILE OPTIMIZED: Touch-friendly, proper mobile navigation
 import { useState } from 'react';
 import { useStore } from './store/useStore';
 import { THEME } from './theme';
@@ -10,7 +10,7 @@ interface SettingsProps {
 type SettingsCategory = 'account' | 'security' | 'notifications' | 'appearance' | 'privacy' | 'about' | 'preferences';
 
 export default function Settings({ setCurrentScreen }: SettingsProps) {
-  const { user, logout } = useStore();
+  const { logout } = useStore();
   const [activeCategory, setActiveCategory] = useState<SettingsCategory>('account');
 
   // Mobile-appropriate back navigation - goes to home for now
@@ -219,7 +219,7 @@ export default function Settings({ setCurrentScreen }: SettingsProps) {
           <CategoryButton category='appearance' label='Display' icon='' />
           <CategoryButton category='preferences' label='Prefs' icon='' />
           <CategoryButton category='privacy' label='Privacy' icon='' />
-          <CategoryButton category='about' label='About' icon='ℹ' />
+          <CategoryButton category='about' label='About' icon='?' />
         </div>
 
         {/* Mobile-optimized content area */}
